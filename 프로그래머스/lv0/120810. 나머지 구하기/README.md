@@ -65,5 +65,11 @@
 <li><code>num1</code>이 10, <code>num2</code>가 5이므로 10을 5로 나눈 나머지 0을 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(num1, num2) {
+    return num1 % num2;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

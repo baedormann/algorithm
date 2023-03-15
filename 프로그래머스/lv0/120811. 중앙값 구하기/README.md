@@ -63,5 +63,16 @@
 <li>9, -1, 0을 오름차순 정렬하면 -1, 0, 9이고 가장 중앙에 위치하는 값은 0입니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(array) {
+    array.sort(function(a, b){
+        return a - b;
+    });
+    
+    return array[Math.floor(array.length / 2)];
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

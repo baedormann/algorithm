@@ -62,5 +62,11 @@
 <li>2022년 기준 23살이므로 2000년생입니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(age) {
+    return 2022 - age + 1;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

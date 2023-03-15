@@ -66,5 +66,13 @@
 <li>64인분을 시켜 서비스로 음료수를 6개 받아 총 64 * 12000 + 6 * 2000 - 6 * 2000 =768,000원입니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(n, k) {  
+    k -= Math.floor(n / 10);
+    
+    return 12000 * n + 2000 * k;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -72,5 +72,18 @@
 <li><code>num_list</code>가 [1, 0, 1, 1, 1, 3, 5]이므로 순서를 거꾸로 뒤집은 배열 [5, 3, 1, 1, 1, 0, 1]을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num_list) {    
+    let reverseArr = [];
+    
+    for(let i = num_list.length - 1; i >= 0; i--){
+        reverseArr.push(num_list[i])
+    }
+    
+    return reverseArr;  
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

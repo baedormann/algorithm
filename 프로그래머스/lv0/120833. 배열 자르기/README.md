@@ -69,5 +69,18 @@
 <li>[1, 3, 5]의 1번째 인덱스 3부터 2번째 인덱스 5까지 자른 [3, 5]를 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(numbers, num1, num2) {
+    let newArr = []
+    
+    for(let i = num1; i <= num2; i++){
+        newArr.push(numbers[i])
+    }
+    
+    return newArr;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

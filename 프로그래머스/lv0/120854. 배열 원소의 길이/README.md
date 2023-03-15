@@ -62,5 +62,15 @@
 <li>["I", "Love", "Programmers."]의 각 원소의 길이인 [1, 4, 12]을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(strlist) {
+    let lengthArr = [];
+    strlist.map(e => lengthArr.push(e.length));
+    
+    return lengthArr;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

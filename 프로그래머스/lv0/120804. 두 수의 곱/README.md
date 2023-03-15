@@ -65,5 +65,10 @@
 <li><code>num1</code>이 27, <code>num2</code>가 19이므로 27 * 19 = 513을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+let solution = (num1, num2) => {return num1 * num2}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -61,5 +61,18 @@
 <li><code>my_string</code>이 "bread"이므로 거꾸로 뒤집은 "daerb"를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string) {
+    var reversStr = '';
+    
+    for(let i = my_string.length - 1; i >= 0; i--){
+        reversStr += my_string[i];
+    }
+    
+    return reversStr;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

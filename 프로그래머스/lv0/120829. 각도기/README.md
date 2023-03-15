@@ -79,5 +79,18 @@
 <li><code>angle</code>이 180이므로 평각입니다. 따라서 4를 return합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(angle) {
+    var answer;
+    
+    if(angle == 90) answer = 2
+    else if(angle == 180) answer = 4
+    else if(angle > 90 && angle < 180) answer = 3
+    else if(angle < 90 && angle > 0) answer = 1
+    
+    return answer;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

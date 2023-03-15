@@ -64,9 +64,9 @@
 <ul>
 <li><code>num1</code>이 7, <code>num2</code>가 2이므로 7을 2로 나눈 몫 3을 return 합니다.</li>
 </ul>
-
+```javascript
 function solution(num1, num2){
     return parseInt(num1 / num2)
 }
-
+```
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

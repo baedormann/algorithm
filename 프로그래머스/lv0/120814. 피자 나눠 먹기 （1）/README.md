@@ -71,5 +71,19 @@
 <li>15명이 최소 한 조각씩 먹기 위해서 최소 3판이 필요합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(n) {
+    
+    var answer = Math.floor(n / 7);
+    
+    if(n % 7 >= 1){
+        answer++;
+    }   
+    
+    return answer;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

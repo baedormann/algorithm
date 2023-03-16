@@ -61,5 +61,14 @@
 <li>976은 제곱수가 아닙니다. 따라서 2를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(n) {
+    if(Math.sqrt(n) % 1 == 0) return 1;
+    else return 2;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

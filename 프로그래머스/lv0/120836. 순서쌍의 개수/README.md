@@ -61,5 +61,18 @@
 <li><code>n</code>이 100 이므로 곱이 100인 순서쌍은 (1, 100), (2, 50), (4, 25), (5, 20), (10, 10), (20, 5), (25, 4), (50, 2), (100, 1) 이므로 9를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(n) {
+    let cnt = 0;
+    for(let i = 1; i <= n; i++){
+        if(n % i === 0) cnt++
+    }
+    
+    return cnt;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

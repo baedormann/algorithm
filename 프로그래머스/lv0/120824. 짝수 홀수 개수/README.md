@@ -62,5 +62,17 @@
 <li>[1, 3, 5, 7]에는 짝수가 없고 홀수가 네 개 있습니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num_list) {
+    var EvenOddArr = [0, 0];
+    
+    num_list.map(x => x % 2 == 0 ? EvenOddArr[0]++ : EvenOddArr[1]++)
+    
+    return EvenOddArr;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

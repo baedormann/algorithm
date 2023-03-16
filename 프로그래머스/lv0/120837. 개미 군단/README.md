@@ -72,5 +72,13 @@
 <li><code>hp</code>가 999이므로, 장군개미 199 마리 병정개미 한마리 일개미 한마리로 사냥할 수 있습니다. 따라서 201을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(hp) {
+   return Math.floor(hp / 5) + Math.floor(hp % 5 / 3) + Math.floor(hp % 5 % 3);
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -61,20 +61,5 @@
 <li>9 + 3 + 0 + 2 + 1 + 1 = 16을 return합니다.</li>
 </ul>
 
-### 풀이
-
-```js
-function solution(n) {
-    var nToStr = n.toString();
-    var sum = 0;
-
-    for(let i = 0; i < nToStr.length; i++){
-        sum += parseInt(nToStr[i]);
-    }
-
-    return sum;
-}
-```
-
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

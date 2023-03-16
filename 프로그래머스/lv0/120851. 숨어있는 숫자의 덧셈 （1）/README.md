@@ -70,5 +70,19 @@
 <li>연속된 숫자도 각각 한 자리 숫자로 취급합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string) {
+    let sum = 0;
+    
+    for(let i = 0; i < my_string.length; i++){
+        if(my_string[i] / 1) sum += +my_string[i]
+    }
+    
+    return sum;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

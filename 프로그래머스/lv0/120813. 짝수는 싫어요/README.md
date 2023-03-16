@@ -61,5 +61,19 @@
 <li>15 이하의 홀수가 담긴 배열 [1, 3, 5, 7, 9, 11, 13, 15]를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(n) {
+    let arr = [];
+    
+    for(let i = 1; i <= n; i+=2){
+        arr.push(i);
+    }
+    
+    return arr;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

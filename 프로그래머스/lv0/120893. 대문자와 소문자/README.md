@@ -62,5 +62,21 @@
 <li>소문자는 대문자로 대문자는 소문자로 바꾼 "ABcDeFGHij"를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string) {
+    let newStr = '';
+    
+    for(let i = 0; i < my_string.length; i++){
+        my_string[i] == my_string[i].toUpperCase() 
+            ? newStr += my_string[i].toLowerCase() 
+            : newStr += my_string[i].toUpperCase();
+    }
+    
+    return newStr;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

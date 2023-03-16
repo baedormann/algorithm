@@ -77,5 +77,18 @@
 <li>"AbcAbcA" <code>str1</code>에 <code>str2</code>가 없으므로 2를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(str1, str2) {
+    for(let i = 0; i < str1.length; i++){
+        if(str1.substring(i, i + str2.length) == str2)
+            return 1;
+    }
+    
+    return 2;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

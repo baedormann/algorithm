@@ -72,5 +72,21 @@
 <li>"abcde0"에 있는 숫자 0을 오름차순 정렬한 [0]을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string) {
+    let ascArr = [];
+    
+    for(let i = 0; i < my_string.length; i++){
+        if(my_string[i] % 1 === 0) ascArr.push(+my_string[i]);
+    }
+    
+    ascArr.sort(function(a, b){return a - b})
+    
+    return ascArr;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

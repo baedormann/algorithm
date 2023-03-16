@@ -65,5 +65,10 @@
 <li>12명이 4조각으로 자른 피자를 한 조각 이상씩 먹으려면 최소 3판을 시켜야 합니다.</li>
 </ul>
 
+```js
+function solution(slice, n) {
+    return slice > n ? 1 : Math.ceil(n / slice)
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

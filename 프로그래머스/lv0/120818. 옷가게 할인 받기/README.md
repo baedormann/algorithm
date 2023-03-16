@@ -67,5 +67,16 @@
 <li>580,000원에서 20%를 할인한 464,000원을 return 합니다.</li>
 </ul>
 
+### 출력
+
+```js
+function solution(price) {
+    if(price >= 500000) price *= 0.8;
+    else if(price >= 300000) price *= 0.9;
+    else if(price >= 100000) price *= 0.95;
+    
+    return Math.floor(price);    
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

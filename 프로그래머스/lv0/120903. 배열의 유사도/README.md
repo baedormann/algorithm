@@ -67,5 +67,21 @@
 <li>같은 원소가 없으므로 0을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(s1, s2) {
+    let cnt = 0;
+    
+    for(let i = 0; i < s1.length; i++){
+        for(let j = 0; j < s2.length; j++){
+            if(s1[i] == s2[j]) cnt++        
+        }
+    }
+
+    return cnt;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

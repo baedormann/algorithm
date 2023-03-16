@@ -63,5 +63,21 @@
 <li>"205"는 순서대로 가위, 바위, 보이고 이를 모두 이기려면 바위, 보, 가위를 순서대로 내야하므로 “052”를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(rsp) {
+    let winStr = ''
+    
+    for(let i = 0; i < rsp.length; i++){
+        if(rsp[i] === '0') winStr += '5';
+        else if(rsp[i] === '2') winStr += '0';
+        else if(rsp[i] === '5') winStr += '2';
+    }
+    
+    return winStr;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

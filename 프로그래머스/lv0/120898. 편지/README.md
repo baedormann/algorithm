@@ -64,5 +64,13 @@
 <li><code>message</code>의 글자 수가 11개로 최소 가로 22cm의 편지지가 필요합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(message) {
+    return message.length * 2;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

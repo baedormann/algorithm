@@ -74,5 +74,20 @@
 <li><code>dot</code>이 [-7, 9]로 x 좌표가 음수, y 좌표가 양수이므로 제 2 사분면에 속합니다. 따라서 2를 return 합니다.</li>
 </ul>
 
+```js
+function solution(dot) {
+    let biVal = 0;
+ 
+    if(dot[0] > 0) biVal += 10;
+    if(dot[1] > 0) biVal++;
+    
+    switch(biVal){
+        case 0: return 3;
+        case 1: return 2;
+        case 10: return 4;
+        case 11: return 1;
+    }
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

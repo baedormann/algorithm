@@ -74,6 +74,8 @@
 <li><code>dot</code>이 [-7, 9]로 x 좌표가 음수, y 좌표가 양수이므로 제 2 사분면에 속합니다. 따라서 2를 return 합니다.</li>
 </ul>
 
+### 출력
+
 ```js
 function solution(dot) {
     let biVal = 0;

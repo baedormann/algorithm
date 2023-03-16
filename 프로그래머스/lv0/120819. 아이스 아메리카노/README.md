@@ -61,5 +61,13 @@
 <li>15,000원은 아이스 아메리카노 두 잔을 살 수 있고 잔돈은 4,000원입니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(money) {
+    return [Math.floor(money / 5500), money % 5500]
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

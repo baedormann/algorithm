@@ -62,5 +62,16 @@
 <li>[1, 2, 100, -99, 1, 2, 3]의 각 원소에 두배를 한 배열 [2, 4, 200, -198, 2, 4, 6]을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(numbers) {
+    for(let i = 0; i < numbers.length; i++){
+        numbers[i] *= 2;
+    }
+    
+    return numbers;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

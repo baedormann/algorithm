@@ -66,5 +66,15 @@
 <li>180, 120, 140 중 190보다 큰 수는 없으므로 0명입니다.</li>
 </ul>
 
+```js
+function solution(array, height) {
+    let cnt = 0;
+    for(let i = 0; i < array.length; i++){
+        if(height < array[i]) cnt++;
+    }
+    
+    return cnt;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

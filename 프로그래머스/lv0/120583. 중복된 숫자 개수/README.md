@@ -66,5 +66,19 @@
 <li>[0, 2, 3, 4] 에는 1이 0개 있습니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(array, n) {
+    var answer = 0;
+    
+    for(let i = 0; i < array.length; i++){
+        array[i] === n ? answer++ : '';
+    }
+    
+    return answer;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

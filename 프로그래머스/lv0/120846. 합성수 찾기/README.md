@@ -61,5 +61,23 @@
 <li>15 이하 합성수는 4, 6, 8, 9, 10, 12, 14, 15 로 8개입니다. 따라서 8을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(n) {
+    let cnt = 0;
+    
+    for(let i = 4; i <= n; i++){
+        for(let j = i - 1; j > 1; j--){
+            if(i % j === 0) {
+                cnt++;
+                break;
+            }
+        }
+    }
+    
+    return cnt;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

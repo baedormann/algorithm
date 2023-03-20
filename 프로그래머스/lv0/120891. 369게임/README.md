@@ -61,5 +61,19 @@
 <li>29423은 3이 1개, 9가 1개 있으므로 2를 출력합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(order) {
+    numArr = order.toString();
+    let cnt = 0;
+
+    Array.from(numArr).map(e => {
+        if(e != 0 && e % 3 === 0) cnt++;
+    })
+    
+    return cnt;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

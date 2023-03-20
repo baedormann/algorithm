@@ -71,5 +71,19 @@
 <li>"Python"를 모두 소문자로 바꾸면 "python"이고 이를 알파벳 순으로 정렬하면 "hnopty"입니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string) {
+    let arr = Array.from(my_string);
+    
+    for(let i in arr) arr[i] = arr[i].toLowerCase();
+    
+    arr.sort();
+    
+    return arr.join('');
+    
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

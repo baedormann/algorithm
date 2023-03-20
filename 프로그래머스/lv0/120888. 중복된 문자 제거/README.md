@@ -65,5 +65,18 @@
 <li>"We are the world"에서 중복된 문자 "e", " ", "r" 들을 제거한 "We arthwold"을 return합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(my_string) {
+    let strArr = Array.from(my_string);
+    let pushArr = [];
+    
+    for(let i in strArr){
+        if(pushArr.indexOf(strArr[i]) === -1) pushArr.push(strArr[i]);
+    }
+    
+    return pushArr.join('');
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

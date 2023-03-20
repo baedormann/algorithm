@@ -73,5 +73,18 @@
 <li><code>age</code>가 100이므로 "baa"를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(age) {
+    ageStr = '';
+    
+    for(let i = 0; i < age.toString().length; i++){
+        ageStr += String.fromCharCode(parseInt(age.toString()[i]) + 97);
+    }
+    
+    return ageStr;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

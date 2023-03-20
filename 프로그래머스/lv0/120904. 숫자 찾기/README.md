@@ -77,5 +77,18 @@
 <li>123456에 7은 없으므로 -1을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num, k) {
+    let noArr = Array.from(num.toString());
+ 
+    for(let i = 0; i < noArr.length; i++){
+        if(noArr[i] == k) return i + 1;
+    }
+    
+    return -1;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

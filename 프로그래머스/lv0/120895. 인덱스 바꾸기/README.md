@@ -70,5 +70,15 @@
 <li>"I love you"의 3번째 인덱스 "o"와 " "(공백)을 바꾸면 "I l veoyou"입니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string, num1, num2) {
+    let str1 = my_string[num1];
+    let str2 = my_string[num2];
+    
+    return my_string.substring(0, num1) + str2 + my_string.substring((num1 + 1), num2) + str1 + my_string.substring((num2 + 1), my_string.length);
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

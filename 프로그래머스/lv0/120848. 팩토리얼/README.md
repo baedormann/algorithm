@@ -65,5 +65,20 @@
 <li>3! = 6, 4! = 24입니다. <code>n</code>이 7이므로, 7 이하의 최대 팩토리얼인 3을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(n) {
+    let num = 1;
+    
+    for(let i = 1; ; i++){
+        num *= i;
+        
+        if(num > n) return i - 1;
+    }
+}
+```
+
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

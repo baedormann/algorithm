@@ -73,5 +73,24 @@
 <li><code>emergency</code>가 [30, 10, 23, 6, 100]이므로 응급도의 크기 순서대로 번호를 매긴 [2, 4, 3, 5, 1]를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(emergency) {
+    let arr = [...emergency];
+    let indexArr = [];
+    
+    arr.sort((a, b) => b - a)
+    
+    for(let i = 0; i < arr.length; i++){  
+        indexArr.push(arr.indexOf(emergency[i]) + 1);
+    }
+    
+    return indexArr;
+}
+```
+
+
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

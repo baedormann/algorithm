@@ -67,5 +67,28 @@
 <li>10, 11, 12 중 13과 가장 가까운 수는 12입니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(array, n) {
+    array.sort((a, b) => {return a - b})
+    let nearest = array[0];
+    
+    for(let i = 0; i < array.length; i++){
+        let diff = getAbsolute(array[i] - n);
+        let nDiff = getAbsolute(nearest - n);
+
+        if(diff < nDiff){
+            nearest = array[i];
+        }
+    }
+    
+    return nearest;
+}
+
+let getAbsolute = (num) => {
+    return num >= 0 ? num : -num;
+} 
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

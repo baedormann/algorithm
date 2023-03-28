@@ -89,5 +89,26 @@
 <li><code>db</code>에 아이디가 맞는 계정이 없으므로 "fail"을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(id_pw, db) {
+    let msg = 'fail';
+    
+    for(let i in db){
+        if(id_pw[0] === db[i][0]){
+            if(id_pw[1] === db[i][1])
+                msg = 'login';
+            else 
+                msg = 'wrong pw';
+            
+            return msg;
+        }
+    }
+    
+    return msg;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

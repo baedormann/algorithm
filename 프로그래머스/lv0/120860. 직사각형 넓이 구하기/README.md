@@ -63,6 +63,10 @@
 <ul>
 <li>좌표 [[-1, -1], [1, 1], [1, -1], [-1, 1]]를 꼭짓점으로 갖는 직사각형의 가로, 세로 길이는 각각 2, 2이므로 직사각형의 넓이는 2 x 2 = 4입니다.</li>
 </ul>
+
+### 풀이
+
+```js
 function solution(dots) {
     dots.sort((a, b) =>  a[0] - b[0])
     
@@ -71,5 +75,7 @@ function solution(dots) {
     
     return x * y;
 }
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

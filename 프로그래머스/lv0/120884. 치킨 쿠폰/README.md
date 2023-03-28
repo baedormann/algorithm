@@ -69,5 +69,24 @@
 <li>따라서 108 + 10 + 1 + 1 = 120 을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(chicken) {
+    let coupon = chicken;
+    let cnt = 0;
+    
+    while(coupon >= 10){    
+        let newChicken = Math.floor(coupon / 10);
+        coupon -= newChicken * 9;
+    
+        cnt += newChicken
+    }
+    
+    return cnt;
+    
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

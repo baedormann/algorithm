@@ -74,5 +74,31 @@
 <li>[0, 0]에서 아래로 다섯 칸 이동한 좌표는 [0, -5]이지만 맵의 세로 크기가 9이므로 아래로는 네 칸을 넘어서 이동할 수 없습니다. 따라서 [0, -4]를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(keyinput, board) {
+    let nowXy = [0, 0];
+    let maxX = (board[0] - 1) / 2;
+    let maxY = (board[1] - 1) / 2;
+    
+    for(let i in keyinput){
+        if(keyinput[i] == 'up' && nowXy[1] + 1 <= maxY) {    
+            nowXy[1]++;
+        }
+        else if(keyinput[i] == 'down' && nowXy[1] - 1 >= -maxY) {
+            nowXy[1]--;   
+        }
+        else if(keyinput[i] == 'left' && nowXy[0] - 1 >= -maxX) {
+            nowXy[0]--; 
+        }
+        else if(keyinput[i] == 'right' && nowXy[0] + 1 <= maxX) {
+            nowXy[0]++;
+        }
+    }
+    
+    return nowXy;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

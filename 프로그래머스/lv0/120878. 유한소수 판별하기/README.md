@@ -96,5 +96,31 @@
 
 <p>※ 공지 - 2022년 11월 10일 테스트 케이스가 추가되었습니다. 기존에 제출한 코드가 통과하지 못할 수도 있습니다.</p>
 
+### 풀이
+
+```js
+function solution(a, b) {
+    let aa = a;
+    let bb = b;
+    
+    for(let i = aa; i > 0; i--){
+        if(b % i === 0 && a % i === 0){
+            a = a / i;
+            b = b / i;
+            break;
+        }
+    }
+    
+    bb = b;
+    for(let i = 0; i < bb; i++){
+        if(b % 2 === 0) b /= 2;
+        if(b % 5 === 0) b /= 5;
+        if(b === 1) return 1;
+    }
+    
+    return 2;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

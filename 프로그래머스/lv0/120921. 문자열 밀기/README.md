@@ -87,5 +87,20 @@
 <li>"abc"는 밀지 않아도 "abc"이므로 0을 반환합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(A, B) {
+    for(let i = 0; i < A.length; i++){
+        if(B === A)
+            return i;
+        else
+            A = A.slice(-1) + A.slice(0, -1)
+    }
+    
+    return -1
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

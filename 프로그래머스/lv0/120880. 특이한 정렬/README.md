@@ -71,6 +71,7 @@
 </ul>
 
 ### 풀이
+
 ```js
 function solution(numlist, n) {
     let newArr = [];

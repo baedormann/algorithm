@@ -70,5 +70,20 @@
 <li>20과 40은 거리가 같으므로 더 큰 40이 앞에 와야 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(numlist, n) {
+    let newArr = [];
+    
+    numlist.sort((a, b) => {
+        if(Math.abs(a - n) === Math.abs(b - n))
+            return b - a;
+        
+        return Math.abs(a - n) - Math.abs(b - n);
+    })
+    
+    return numlist;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

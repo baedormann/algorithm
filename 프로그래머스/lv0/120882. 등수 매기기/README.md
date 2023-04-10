@@ -65,5 +65,40 @@
 <li>공동 2등이 두 명, 공동 4등이 2명 이므로 3등과 5등은 없습니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(score) {
+    //0. 각 요소에 2번째 요소에 index값을 추가한다.
+    for(let i in score){
+        score[i].push(i);
+    }
+    
+    //1. 각 요소배열의 0번째 값, 1번째 값의 합으로 내림차순 정렬
+    score.sort((a, b) => (b[0] + b[1]) - (a[0] + a[1]))
+    
+    //2. 2번째 값으로 3번째 index에 등수 값을 추가한다(합이 같으면 같은 등수로 취급).
+    let dupCnt = 0;
+    for(let i in score){
+        if(score[i][0] + score[i][1] === score[i-1]?.[0] + score[i-1]?.[1])
+            dupCnt++;
+        else 
+            dupCnt = 0;
+        
+        score[i].push(i - dupCnt + 1);
+    }
+    
+    //3. 2번째 값을 사용하여 원래 순서대로 되돌린다.
+    score.sort((a, b) => a[2] - b[2])
+    
+    let rankArr = [];
+    
+    //4. 원래 순서대로 돌아온 배열의 순위를 새로운 배열에 저장한다.
+    for(let i of score) rankArr.push(i[3])
+    
+    //5. 순위 배열을 반환한다.
+    return rankArr;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

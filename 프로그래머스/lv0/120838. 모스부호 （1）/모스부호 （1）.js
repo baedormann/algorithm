@@ -7,17 +7,12 @@ function solution(letter) {
         '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
         '-.--':'y','--..':'z'
     }
-    let morseMap = new Map();
-    
-    for(let i in morse){
-        morseMap.set(i, morse[i])
-    }
-    
+   
     let msg = '';
     
     for(let i of charArr){
-        msg += morseMap.get(i)
+        msg += morse[i]
     }
     
-    return msg
+    return msg;
 }

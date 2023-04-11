@@ -73,5 +73,34 @@
 <li>"x + x + x"에서 동류항끼리 더하면 "3x"입니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(polynomial) {
+    let termArr = polynomial.split(' + ');
+    let xSum = 0;
+    let constSum = 0;
+    let newExpr = '';
+    
+    for(let i of termArr){
+        if(i.endsWith('x')){
+            if(i !== 'x') xSum += Number(i.substring(0, i.length - 1));
+            else xSum++;
+        }
+        else constSum += Number(i);
+    }
+    
+    if(xSum) {
+        if(xSum !== 1) newExpr += xSum;
+        
+        newExpr += 'x';
+        
+        if(constSum) newExpr += ' + ';
+    }
+    
+    if(constSum) newExpr += constSum;
+    
+    return newExpr;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

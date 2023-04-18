@@ -72,5 +72,28 @@ Empty
 <li>"hello"에서 한 번씩 등장한 문자는 "heo"이고 이를 사전 순으로 정렬한 "eho"를 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(s) {
+    let setArr = Array.from(new Set(s));
+    let strArr = Array.from(s);
+    let cnt = 0;
+    let resultArr = [];
+    
+    for(let e of setArr){
+        for(let e1 of strArr){
+            if(e === e1){
+                if(++cnt >= 2) break;
+            }
+        }
+        
+        if(cnt === 1) resultArr.push(e);
+        cnt = 0;
+    }
+    
+    return resultArr.sort().join('');
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

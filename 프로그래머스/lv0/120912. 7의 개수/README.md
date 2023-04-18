@@ -62,5 +62,18 @@ Empty
 <li>[10, 29]에는 7이 없으므로 0을 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(array) {
+    let cnt = 0;
+    for(let number of array){
+        for(let char of number.toString()){
+            if(char == '7') cnt++
+        }
+    }
+    
+    return cnt;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

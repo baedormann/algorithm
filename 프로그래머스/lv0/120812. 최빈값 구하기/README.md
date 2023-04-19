@@ -76,5 +76,31 @@ Empty
 
 <p>※ 공지 - 2022년 10월 17일 제한 사항 및 테스트케이스가 수정되었습니다.</p>
 
+### 풀이
+
+```js
+function solution(paramArr) {    
+    setArr = Array.from(new Set(paramArr));
+    cntArr = [];
+    
+    for(let e1 of paramArr){
+        for(let i in setArr){
+            if(cntArr[i] === undefined) cntArr.push(0);
+            if(e1 === setArr[i]){
+                cntArr[i]++;
+            }
+        }
+    }
+    
+    let cntArrCopy = Array.from(cntArr);
+    cntArrCopy.sort((a, b) => {
+        return b - a;
+    });
+    
+    if(cntArrCopy[0] === cntArrCopy[1]) return -1;
+    
+    return setArr[cntArr.indexOf(cntArrCopy[0])];
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -61,5 +61,13 @@ Empty
 <li>문자열 안의 모든 숫자를 더하면 1이 됩니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num_str) {
+    return num_str.split('').reduce((acc, item) => acc = Number(acc) + Number(item))
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

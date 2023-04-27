@@ -65,5 +65,12 @@ Empty
 <li>32는 3의 배수가 아니므로 0을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num, n) {
+    return num % n === 0 ? 1 : 0
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

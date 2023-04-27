@@ -66,5 +66,11 @@ Empty
 <li>예제 2번의 <code>my_string</code>에서 뒤의 5글자는 "W0r1d"이므로 이 문자열을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+const solution = (my_string, n) => my_string.substring(my_string.length - n)
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -68,5 +68,13 @@ Empty
 <li>55는 5의 배수이지만 10의 배수가 아니기 때문에 0을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(number, n, m) {
+    return !(number % n) && !(number % m) ? 1 : 0;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

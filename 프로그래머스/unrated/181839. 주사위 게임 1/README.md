@@ -83,5 +83,14 @@ Empty
 <li>예제 3번에서 두 주사위 숫자가 모두 홀수가 아니므로 |2 - 4| = |-2| = 2점을 얻습니다. 따라서 2를 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(a, b) {
+    if((a - b) % 2 !== 0) return 2 * (a + b);
+    else return a % 2 === 0 ? Math.abs(a - b) : a*a + b*b
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

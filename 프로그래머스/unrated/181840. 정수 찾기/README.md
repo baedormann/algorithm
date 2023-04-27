@@ -66,5 +66,11 @@ Empty
 <li>[15, 98, 23, 2, 15] 안에 20이 없으므로 0을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+const solution = (num_list, n) => num_list.indexOf(n) === -1 ? 0 : 1
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -63,5 +63,12 @@ Empty
 <li>예제 2번의 <code>my_string</code>은 "programmers"로 단어가 하나만 있습니다. 따라서 ["programmers"]를 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string) {
+    return my_string.split(' ');
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

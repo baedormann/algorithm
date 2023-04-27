@@ -65,5 +65,13 @@ ___</li>
 <li>[5, 2, 1, 7, 5]의 첫 번째 원소부터 세 번째 원소까지의 모든 원소는 [5, 2, 1]입니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num_list, n) {
+    return num_list.splice(0, n)
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

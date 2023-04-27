@@ -69,5 +69,13 @@ Empty
 <li>문제 설명과 같습니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string, target) {
+    return my_string.indexOf(target) > -1 ? 1 : 0
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -66,5 +66,13 @@ Empty
 <li>예제 2번의 <code>my_string</code>에서 앞의 5글자는 "He110"이므로 이 문자열을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string, n) {
+    return my_string.substring(0, n);
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

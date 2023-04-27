@@ -61,5 +61,10 @@ Empty
 <li>2573을 문자열로 변환한 "2573"을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+const solution = n => n.toString()
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

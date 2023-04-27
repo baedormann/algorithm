@@ -62,5 +62,12 @@ Empty
 <li>"8542"를 정수로 바꾸면 8542입니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(n_str) {
+    return Number(n_str);
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

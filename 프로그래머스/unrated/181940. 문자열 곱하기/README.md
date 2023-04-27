@@ -65,6 +65,18 @@ Empty
 <ul>
 <li>예제 2번의 <code>my_string</code>은 "love"이고 이를 10번 반복한 문자열은 "lovelovelovelovelovelovelovelovelovelove"이므로 이를 return 합니다.</li>
 </ul>
+### 풀이
 
+```js
+function solution(my_string, k) {
+    let str = '';
+    
+    for(let i = 0; i < k; i++){
+        str += my_string;
+    }
+    
+    return str;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

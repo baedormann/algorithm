@@ -61,5 +61,11 @@ Empty
 <li>69.32의 정수 부분은 69입니다.</li>
 </ul>
 
+### 풀이
+
+```js
+const solution = flo => Math.floor(flo)
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

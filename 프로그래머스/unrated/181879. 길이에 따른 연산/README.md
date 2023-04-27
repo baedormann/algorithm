@@ -62,5 +62,11 @@ Empty
 <li>리스트의 길이가 4이므로 모든 원소의 곱인 120을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+const solution = num_list => num_list.reduce((acc, item) => num_list.length >= 11 ? acc += item :  acc *= item)
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

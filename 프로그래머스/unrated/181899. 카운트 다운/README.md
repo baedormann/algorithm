@@ -53,5 +53,19 @@ Empty
 <li>10부터 3까지 1씩 감소하는 수를 담은 리스트는 [10, 9, 8, 7, 6, 5, 4, 3]입니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(start, end) {
+    let arr = [start];
+    
+    while(arr[arr.length - 1] > end){
+        arr.push(arr[arr.length - 1] - 1)
+    }
+    
+    return arr;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

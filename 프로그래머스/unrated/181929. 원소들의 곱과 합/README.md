@@ -62,5 +62,20 @@ Empty
 <li>모든 원소의 곱은 840, 합의 제곱은 529이므로 0을 return합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(num_list) {
+    let prod = 1;
+    let sum = 0;
+    
+    num_list.map(e => {
+        prod *= e;
+        sum += e;
+    });
+  
+    return prod < Math.pow(sum, 2) ? 1 : 0;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

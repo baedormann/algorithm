@@ -73,5 +73,14 @@ Empty
 <li>주어진 <code>k</code>인 2는 짝수이므로, 전체 배열에 2를 더합니다. 따라서 [3, 4, 5, 102, 101, 100]을 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(arr, k) {
+    if(k % 2 !== 0) for(let i in arr) arr[i] *= k;
+    else for(let i in arr) arr[i] += k;
+
+    return arr;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

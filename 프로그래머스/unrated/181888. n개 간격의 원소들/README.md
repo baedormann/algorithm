@@ -66,5 +66,19 @@ Empty
 <li>[4, 2, 6, 1, 7, 6]에서 4개 간격으로 저장되어 있는 원소들은 [4, 7]입니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num_list, n) {
+    let newArr = [];
+    
+    for(let i = 0; i < num_list.length; i = i + n){
+        newArr.push(num_list[i]);    
+    }
+    
+    return newArr;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

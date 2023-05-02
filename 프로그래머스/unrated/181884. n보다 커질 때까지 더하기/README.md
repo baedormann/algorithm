@@ -96,5 +96,20 @@ Empty
 <li><p>예제 2번의 <code>numbers</code>의 마지막 원소 전까지의 원소를 sum에 더하면 139입니다. 139는 <code>n</code> 값인 139보다 크지 않고 마지막 원소인 100을 더하면 139보다 커지므로 239를 return 합니다.</p></li>
 </ul>
 
+### 풀이
+
+```js
+function solution(numbers, n) {
+    let sum = 0;
+    for(let i of numbers){
+        sum += i;
+        
+        if(sum > n) return sum;
+    }
+    
+    return -1;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

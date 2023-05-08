@@ -73,5 +73,14 @@ Empty
 <li><code>a</code> ⊕ <code>b</code> = 898 이고, <code>b</code> ⊕ <code>a</code> = 889 입니다. 둘 중 더 큰 값은 898 이므로 898을 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(a, b) {
+    a = a.toString();
+    b = b.toString();
+    
+    return parseInt(a + b > b + a ? a + b : b + a);
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

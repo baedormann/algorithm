@@ -62,5 +62,14 @@ Empty
 <li>음수가 없으므로 -1을 return합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(num_list) {
+    for(let i in num_list) if(num_list[i] < 0) return parseInt(i);
+    
+    return -1;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

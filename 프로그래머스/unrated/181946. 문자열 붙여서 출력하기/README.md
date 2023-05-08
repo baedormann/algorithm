@@ -44,4 +44,24 @@ Empty
 <div class="highlight"><pre class="codehilite"><code>HelloWorld!
 </code></pre></div>
 
+### 풀이
+```js
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', function (line) {
+    input = line.split(' ');
+}).on('close', function () {
+    str1 = input[0];
+    str2 = input[1];
+    
+    console.log(str1 + str2);
+});
+```
+
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

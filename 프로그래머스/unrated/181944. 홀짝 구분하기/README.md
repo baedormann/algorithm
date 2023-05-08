@@ -43,4 +43,23 @@ Empty
 <div class="highlight"><pre class="codehilite"><code>1 is odd
 </code></pre></div>
 
+### 풀이
+```js
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', function (line) {
+    input = line.split(' ');
+}).on('close', function () {
+    n = Number(input[0]);
+    
+    console.log(n % 2 === 0 ? `${n} is even` : `${n} is odd`)
+});
+```
+
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

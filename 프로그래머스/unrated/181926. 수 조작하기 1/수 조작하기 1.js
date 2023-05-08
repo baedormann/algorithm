@@ -1,6 +1,6 @@
 function solution(n, control) {
-    for(let i in control){
-        switch(control[i]){
+    for(let i of control){
+        switch(i){
             case 'w': n++;
                 break;
             case 's': n--;

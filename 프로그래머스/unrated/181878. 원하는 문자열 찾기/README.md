@@ -66,5 +66,12 @@ Empty
 <li><code>myString</code>의 길이가 <code>pat</code>보다 더 짧기 때문에 <code>myString</code>의 부분 문자열 중 <code>pat</code>와 같은 문자열이 있을 수 없습니다. 따라서 0을 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(myString, pat) {
+    return myString.toUpperCase().includes(pat.toUpperCase()) ? 1 : 0
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

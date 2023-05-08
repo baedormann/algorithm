@@ -52,5 +52,11 @@ Empty
 <li>[12, 4, 15, 46, 38, 1, 14, 56, 32, 10]를 정렬하면 [1, 4, 10, 12, 14, 15, 32, 38, 46, 56]이 되고, 앞에서 부터 6번째 이후의 수들을 고르면 [15, 32, 38, 46, 56]가 됩니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(num_list) {
+    return num_list.sort((a, b) => a - b).splice(5);    
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -68,5 +68,17 @@ Empty
 <li>따라서 ["abc","ABC"]를 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(strArr) {
+    for(let i in strArr){
+        i % 2 === 0
+        ? strArr[i] = strArr[i].toLowerCase()
+        : strArr[i] = strArr[i].toUpperCase();
+    }
+    
+    return strArr;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

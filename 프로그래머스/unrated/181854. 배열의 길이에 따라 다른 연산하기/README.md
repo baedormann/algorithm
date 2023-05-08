@@ -66,5 +66,13 @@ Empty
 <li>예제 2번의 <code>arr</code>의 길이는 4로 짝수입니다. 따라서 <code>arr</code>의 홀수 인덱스 1, 3에 주어진 <code>n</code> 값인 100을 더하면 [444, 655, 666, 877]이 됩니다. 따라서 [444, 655, 666, 877]를 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(arr, n) {
+    return arr.length % 2 === 0
+    ? arr.map((v, i) => i % 2 !== 0 ? v + n : v)
+    : arr.map((v, i) => i % 2 === 0 ? v + n : v)
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

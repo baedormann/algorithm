@@ -148,5 +148,16 @@ Empty
 <li>예제 4번의 <code>rny_string</code>에는 'm'이 없습니다. 따라서 <code>rny_string</code> 그대로인 "burn"를 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(rny_string) {
+    let str = '';
+    
+    for(let i of rny_string)
+        i === 'm' ? str += 'rn' : str += i;
+    
+    return str;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -61,5 +61,19 @@ Empty
 <li>예제 2번의 <code>n</code>은 10으로 짝수입니다. 10 이하의 모든 양의 짝수는 2, 4, 6, 8, 10이고 이들의 제곱의 합인 2<sup>2</sup> + 4<sup>2</sup> + 6<sup>2</sup> + 8<sup>2</sup> + 10<sup>2</sup> = 4 + 16 + 36 + 64 + 100 = 220을 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(n) {
+    let sum = 0;
+    
+    if(n % 2 === 0)
+        for(let i = 0; i <= n; i += 2) sum += i ** 2;
+    else
+        for(let i = 1; i <= n; i += 2) sum += i;
+    
+    return sum;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

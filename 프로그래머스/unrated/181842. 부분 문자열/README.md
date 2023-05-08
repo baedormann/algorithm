@@ -67,5 +67,12 @@ Empty
 <li>"tbbttb"에는 "tbt"가 없으므로 0을 return합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(str1, str2) {
+    return str2.includes(str1) ? 1 : 0
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

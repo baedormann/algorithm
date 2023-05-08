@@ -65,5 +65,16 @@ Empty
 <li>1 이상 15 이하의 5의 배수는 5, 10, 15 이므로 [5, 10, 15]를 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(n, k) {
+    let arr = [];
+    
+    for(let i = k; i <= n; i++) if(i % k === 0) arr.push(i);
+        
+    return arr
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

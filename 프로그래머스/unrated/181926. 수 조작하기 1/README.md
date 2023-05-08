@@ -69,5 +69,23 @@ Empty
 <li>따라서 -1을 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(n, control) {
+    for(let i of control){
+        switch(i){
+            case 'w': n++;
+                break;
+            case 's': n--;
+                break;
+            case 'd': n += 10;
+                break;
+            case 'a': n -= 10;
+        }    
+    }
+    
+    return n;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

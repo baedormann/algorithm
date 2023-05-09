@@ -65,5 +65,25 @@ Empty
 <li>"1a2b3c4d123Z"안의 자연수는 1, 2, 3, 4, 123 입니다. 따라서 1 + 2 + 3 + 4 + 123 = 133 을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string) {
+    let sum = 0;
+    let sumStr = '';
+    
+    for(let i in my_string){
+        if(!Number.isNaN(parseInt(my_string[i])))
+            sumStr += my_string[i];
+        else{
+            sumStr === '' ? sum += 0 : sum += parseInt(sumStr);
+            sumStr = '';
+        }
+    }
+    
+    return sumStr === '' ? sum : sum + parseInt(sumStr);
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

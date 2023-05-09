@@ -11,7 +11,5 @@ function solution(my_string) {
         }
     }
     
-    sumStr === '' ? sum += 0 : sum += parseInt(sumStr);
-    
-    return sum;
+    return sumStr === '' ? sum : sum + parseInt(sumStr);
 }

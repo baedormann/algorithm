@@ -95,5 +95,17 @@ Empty
 
 <p>※ 공지 - 2022년 11월 30일 제한사항 및 테스트 케이스가 수정되었습니다.</p>
 
+### 풀이
+```js
+function solution(s) {
+    let arr = s.split(' ');
+    let sum = 0;
+    
+    for(let i in arr)
+        arr[i] === 'Z' ? sum -= parseInt(arr[i - 1]) : sum += parseInt(arr[i]);
+      
+    return sum;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

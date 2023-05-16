@@ -1,6 +1,5 @@
 function solution(my_string) {
     my_string = my_string.split('').filter(e => e !== ' ').map(e => Number.isNaN(parseInt(e)) ? e : parseInt(e) );
-    
     let num = 0;
     let total = 0;
     let lastOper;
@@ -16,7 +15,6 @@ function solution(my_string) {
             continue;
         }
         
-        
         switch(lastOper){
             case null:
             case undefined: num = num * 10 + curItem;
@@ -28,7 +26,6 @@ function solution(my_string) {
         }
         
         nth = 10;
-        console.log(total)
     }
     total += num;
     

@@ -64,5 +64,41 @@ Empty
 <li>3 + 4 = 7을 return 합니다.</li>
 </ul>
 
+### 풀이
+```js
+function solution(my_string) {
+    my_string = my_string.split('').filter(e => e !== ' ').map(e => Number.isNaN(parseInt(e)) ? e : parseInt(e) );
+    let num = 0;
+    let total = 0;
+    let lastOper;
+    let nth = 1;
+    
+    for(let i = 0; i < my_string.length; i++){
+        let curItem = my_string[i];
+        if(curItem === '+' || curItem === '-'){
+            lastOper = curItem;
+            nth = 1;
+            total += num;
+            num = 0;
+            continue;
+        }
+        
+        switch(lastOper){
+            case null:
+            case undefined: num = num * 10 + curItem;
+                break;
+            case '+': num = num * nth + curItem;
+                break;
+            case '-': num = num * nth - curItem;
+                break;
+        }
+        
+        nth = 10;
+    }
+    total += num;
+    
+    return total;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

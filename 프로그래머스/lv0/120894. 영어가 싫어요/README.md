@@ -64,5 +64,17 @@ Empty
 <li>"onefourzerosixseven"를 숫자로 바꾼 14067를 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(numbers, numArr = []) {
+    let strArr = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+  
+    for(let i in strArr)
+        numbers = numbers.replaceAll(strArr[i], i);
+    
+    return parseInt(numbers);
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

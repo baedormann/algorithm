@@ -81,5 +81,17 @@ Empty
 ※ 공지 - 2022년 10월 27일 제한 사항 및 테스트 케이스가 수정되었습니다.<br>
 ※ 공지 - 2023년 2월 14일 테스트 케이스가 수정되었습니다.</p>
 
+### 풀이
+
+```js
+function solution(dots) {
+    let a = Math.abs(dots[0][0] - dots[1][0])
+    let b = Math.abs(dots[0][1] - dots[1][1])
+    let c = Math.abs(dots[2][0] - dots[3][0])
+    let d = Math.abs(dots[2][1] - dots[3][1])
+    
+    return a/b === c/d ? 1 : 0
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

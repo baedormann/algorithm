@@ -1,20 +1,19 @@
 function solution(balls, share) {
-  if (balls <= 0 || share <= 0 || share > balls) {
-    return 0;
-  }
-
-  let numerator = 1;
-  let denominator = 1;
-
-  // 분자 계산
-  for (let i = balls; i > balls - share; i--) {
-    numerator *= i;
-  }
-
-  // 분모 계산
-  for (let i = share; i > 0; i--) {
-    denominator *= i;
-  }
-
-  return numerator / denominator;
+    let numer = 1;
+    let denom1 = 1;
+    let denom2 = 1;
+    
+    for(let i = 1; i <= balls; i++){
+        numer *= i;
+    }
+    
+    for(let i = 1; i <= balls - share; i++){
+        denom1 *= i;
+    }
+    
+    for(let i = 1; i <= share; i++){
+        denom2 *= i;
+    }
+    
+    return Math.round(numer / (denom1 * denom2))
 }

@@ -68,5 +68,14 @@ Empty
 <li>[2, 4, 8]은 공비가 2인 등비수열이므로 다음에 올 수는 16이다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(common) {
+    return common[2] - common[1] === common[1] - common[0] 
+        ? common[common.length - 1] + (common[1] - common[0])
+        : common[common.length - 1] * (common[1] / common[0])
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

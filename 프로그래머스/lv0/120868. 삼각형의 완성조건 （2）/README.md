@@ -99,5 +99,12 @@ Empty
 <li>따라서 7 + 6 = 13을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(sides) {
+    return sides[0] > sides[1] ? sides[1] * 2 - 1 : sides[0] * 2 - 1
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -80,5 +80,21 @@ Empty
 
 <p>※ 공지 - 2022년 10월 27일 문제 지문이 리뉴얼되었습니다. 기존에 제출한 코드가 통과하지 못할 수도 있습니다.</p>
 
+### 풀이
+
+```js
+function solution(babbling) {
+    const words = ["aya", "ye", "woo", "ma"];
+    let cnt = 0;
+    
+    babbling.map(b => {
+        let bLength = b.length;
+        words.map( w => b.includes(w) && (bLength -= w.length) );
+        if(bLength === 0) cnt++;
+    })
+    
+    return cnt;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

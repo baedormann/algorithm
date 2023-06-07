@@ -135,5 +135,23 @@ Empty
 <p>따라서 [1]을 return 합니다.</p></li>
 </ul>
 
+### 풀이
+
+```js
+function solution(arr) {
+    var numArr = [];
+    
+    arr.forEach(e => {
+        let iter = e;
+        while(iter > 0){
+            numArr.push(e);
+            iter--;
+        }
+    });
+    
+    return numArr;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

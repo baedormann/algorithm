@@ -89,5 +89,13 @@ Empty
 <li>예제 4번에서 <code>is_prefix</code>가 <code>my_string</code>의 접두사가 아니기 때문에 0을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string, is_prefix) {
+    return my_string.indexOf(is_prefix) === 0 ? 1 : 0
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -57,5 +57,16 @@ Empty
 <li>따라서 [2, 2, 6, 50, 99, 49]를 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(arr) {
+    return arr.map(e => {
+        if(e >= 50 && e % 2 === 0) return e / 2;
+        else if(e < 50 && e % 2 === 1) return e * 2;
+        else return e
+    })
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

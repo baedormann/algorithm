@@ -89,5 +89,13 @@ Empty
 <li>예제 4번에서 <code>is_suffix</code>가 <code>my_string</code>의 접미사가 아니기 때문에 0을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_string, is_suffix) {
+    return my_string.substring(my_string.length - is_suffix.length) === is_suffix ? 1 : 0
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

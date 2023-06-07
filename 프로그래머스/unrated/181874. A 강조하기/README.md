@@ -67,6 +67,8 @@ Empty
 <li>다른 문자들은 전부 "a"가 아닌 소문자이므로 바꾸지 않습니다.</li>
 <li>따라서 "progrAmmers"를 return 합니다.</li>
 </ul>
-
+function solution(myString) {
+    return myString.split('').map(e => e.toUpperCase() === 'A' ? 'A' : e.toLowerCase()).join('')
+}
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

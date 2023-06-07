@@ -88,5 +88,20 @@ Empty
 <li>설명 생략</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num, total) {
+    var numArr = [];
+    var min = total % num === 0 ? total / num - ~~(num / 2) : ~~(total / num) - total % num + 1;
+    
+    for(let i = min; i < min + num; i++){
+        numArr.push(i)
+    }
+    
+    return numArr;
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

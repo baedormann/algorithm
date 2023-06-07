@@ -62,5 +62,15 @@ Empty
 <li>마지막 원소인 5가 그전 원소인 7보다 크지 않기 때문에 5의 두 배인 10을 추가해 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num_list) {
+    return num_list[num_list.length - 1] > num_list[num_list.length - 2]
+        ? [...num_list, num_list[num_list.length - 1] - num_list[num_list.length - 2]]
+        : [...num_list, num_list[num_list.length - 1] * 2]
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -71,5 +71,13 @@ Empty
 
 <p>※ 2023년 05월 15일 제한사항 및 테스트 케이스가 수정되었습니다. 기존에 제출한 코드가 통과하지 못할 수 있습니다.</p>
 
+### 풀이
+
+```js
+function solution(myString, pat) {
+    return myString.split('').map(e => e === 'A' ? 'B' : 'A').join('').includes(pat) ? 1 : 0
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -68,5 +68,13 @@ Empty
 <li>리스트 안의 모든 문자열이 "c"를 포함하므로 빈 문자열을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(str_list, ex) {
+    return str_list.map(e => e.includes(ex) ? '' : e).join('')
+}
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

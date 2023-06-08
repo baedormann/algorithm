@@ -60,5 +60,18 @@ Empty
 <li>좋아요 수가 동일할 경우 코드를 가장 먼저 제출한 분께 상품을 드립니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(price, money, count) {
+    let total = 0;
+    
+    for(let i = 1; i <= count; i++){
+        total += price * i;
+    }
+    
+    return total - money > 0 ? total - money : 0
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

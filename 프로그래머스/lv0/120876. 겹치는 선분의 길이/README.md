@@ -87,5 +87,32 @@ Empty
 <li>따라서 [1, 9] 구간에 두 개 이상의 선분이 겹쳐있으므로, 8을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(lines) {
+    let newArr = lines.map(e => Array.from(new Set(e.map((e1, i1) => i1 === e.length - 1 ? e1 - 0.5 : e1 + 0.5))));
+    
+    let acc = [];
+    
+    newArr.map((e, i) => {
+        if(e[1] === undefined) acc.push(e[0]);
+        for(let j = e[0]; j <= e[1]; j++){
+            acc.push(j)
+        }
+    });
+    
+    let arr1 = [];
+    let arr2 = [];
+    acc.forEach(e => {
+        !arr1.includes(e) 
+            ? arr1.push(e) 
+            : !arr2.includes(e) 
+                ? arr2.push(e) : null;       
+    })
+    
+    return arr2.length;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

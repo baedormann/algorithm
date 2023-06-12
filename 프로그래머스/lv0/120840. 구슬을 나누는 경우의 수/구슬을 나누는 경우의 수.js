@@ -7,11 +7,11 @@ function solution(balls, share) {
         numer *= i;
     }
     
-    for(let i = 1; i <= balls - share; i++){
+    for(let i = 1; i <= share; i++){
         denom1 *= i;
     }
     
-    for(let i = 1; i <= share; i++){
+    for(let i = 1; i <= balls - share; i++){
         denom2 *= i;
     }
     

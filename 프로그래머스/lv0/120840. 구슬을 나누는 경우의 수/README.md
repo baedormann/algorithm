@@ -81,5 +81,28 @@ Empty
 
 <p>※ 공지 - 2022년 10월 11일 제한 사항 및 테스트케이스가 수정되었습니다.</p>
 
+### 풀이
+
+```js
+function solution(balls, share) {
+    let numer = 1;
+    let denom1 = 1;
+    let denom2 = 1;
+    
+    for(let i = 1; i <= balls; i++){
+        numer *= i;
+    }
+    
+    for(let i = 1; i <= share; i++){
+        denom1 *= i;
+    }
+    
+    for(let i = 1; i <= balls - share; i++){
+        denom2 *= i;
+    }
+    
+    return Math.round(numer / (denom1 * denom2))
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

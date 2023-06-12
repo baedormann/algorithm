@@ -77,5 +77,31 @@ Empty
 <li>모든 지역에 지뢰가 있으므로 안전지역은 없습니다. 따라서 0을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(board) {
+    let bombSites = [];
+    // i는 세로 방향 인덱스, j는 가로 방향 인덱스
+    board.forEach((e, i) => e.forEach((e1, j) => e1 === 1 ? bombSites.push([i, j]) : false));
+    
+    bombSites.forEach((e, i) => {
+        for(let j = -1; j <= 1; j++){
+            let dangerX = e[0] + j
+            
+            for(let k = -1; k <= 1; k++){
+                let dangerY = e[1] + k;
+                
+                if(dangerX < 0 || dangerY < 0 || dangerY >= board.length || dangerX >= board.length) continue;
+                if(board[dangerX][dangerY] === 1) continue;    
+                
+                board[dangerX][dangerY] = 2;
+            }    
+        }
+    })
+    
+    return board.join(',').split(',').filter(e => e === '0').length;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

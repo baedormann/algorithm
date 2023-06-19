@@ -94,5 +94,14 @@ Empty
 <p>각 부분 문자열을 순서대로 이어 붙인 문자열은 "programmers"입니다. 따라서 "programmers"를 return 합니다.</p></li>
 </ul>
 
+### 풀이
+
+```js
+function solution(my_strings, parts) {
+    return my_strings.reduce((acc, cur, i) => acc += cur.substring(parts[i][0], parts[i][1] + 1), '')
+}
+```
+
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

@@ -86,5 +86,19 @@ Empty
 <li>예제 3번에서는 <code>arr1</code>의 길이와 <code>arr2</code>의 길이가 5로 같고 각 배열의 모든 원소의 합 또한 15로 같습니다. 따라서 <code>arr1</code>과 <code>arr2</code>가 같으므로 0을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(arr1, arr2) {
+    return arr1.length !== arr2.length 
+        ? arr1.length > arr2.length ? 1 : -1
+        : arr1.reduce((acc, cur) => acc += cur) === arr2.reduce((acc, cur) => acc += cur) 
+            ? 0
+            : arr1.reduce((acc, cur) => acc += cur) > arr2.reduce((acc, cur) => acc += cur) 
+                ? 1 : -1
+}
+```
+
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

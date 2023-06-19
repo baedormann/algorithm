@@ -52,5 +52,14 @@ Empty
 <li>[12, 4, 15, 46, 38, 1, 14]를 정렬하면 [1, 4, 12, 14, 15, 38, 46]이 되고, 앞에서 부터 5개를 고르면 [1, 4, 12, 14, 15]가 됩니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num_list) {
+    return num_list.sort((a, b) => a - b).filter((e, i) => i < 5)
+}
+```
+
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

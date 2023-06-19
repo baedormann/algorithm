@@ -69,5 +69,14 @@ Empty
 <li>예제 2번의 <code>arr</code>의 원소 중 <code>delete_list</code>에 있는 원소는 없습니다. 따라서 <code>arr</code> 그대로인 [110, 66, 439, 785, 1]을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(arr, delete_list) {
+    return arr.filter(e => !delete_list.some(e1 => e === e1))
+}
+```
+
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

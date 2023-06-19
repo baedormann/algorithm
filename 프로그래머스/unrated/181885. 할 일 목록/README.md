@@ -61,5 +61,14 @@ Empty
 <li>예제 1번의 <code>todo_list</code> 중에서 "problemsolving"과 "swim"은 마쳤고, "practiceguitar"와 "studygraph"는 아직 마치지 못했으므로 <code>todo_list</code>에서 나온 순서대로 담은 문자열 배열 ["practiceguitar", "studygraph"]를 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(todo_list, finished) {
+    return todo_list.filter((e, i) => !finished[i])
+}
+```
+
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

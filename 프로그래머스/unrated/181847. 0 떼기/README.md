@@ -62,5 +62,12 @@ Empty
 <li>"854020"는 가장 왼쪽에 0이 없으므로 "854020"을 return합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(n_str) {
+    for(let i = 0; i < n_str.length; i++){if(n_str[i] !== '0') return n_str.substring(i)}
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

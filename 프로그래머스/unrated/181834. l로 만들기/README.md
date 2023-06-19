@@ -67,5 +67,14 @@ Empty
 <li>따라서 "llnnllllmm"을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(myString) {
+    return myString.split('').map(e => e.charCodeAt() < 'l'.charCodeAt() ? 'l' : e).join('')
+}
+```
+
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

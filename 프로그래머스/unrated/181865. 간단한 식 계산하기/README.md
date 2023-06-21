@@ -72,5 +72,16 @@ Empty
 <li>예제 3번의 <code>binomial</code>은 "40000 * 40000"으로 이 식을 계산한 결과인 40000 × 40000 = 1600000000을 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(binomial) {
+    return binomial.includes('+')
+        ? binomial.split(' + ').map(e => parseInt(e)).reduce((a, c) => a += c)
+        : binomial.includes('-')
+            ? binomial.split(' - ').map(e => parseInt(e)).reduce((a, c) => a -= c)
+            : binomial.split(' * ').map(e => parseInt(e)).reduce((a, c) => a *= c)
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

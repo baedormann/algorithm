@@ -64,5 +64,12 @@ Empty
 <li>예제 2번의 <code>number</code>는 78720646226947352489으로 각자리 숫자의 합은 101입니다. 101을 9로 나눈 나머지는 2이고, 실제로 78720646226947352489 = 9 × 8746738469660816943 + 2입니다. 따라서 2를 return 합니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(number) {
+    return number.split('').map(e => parseInt(e)).reduce((acc, cur) => acc += cur) % 9;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

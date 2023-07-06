@@ -185,5 +185,21 @@ Empty
 <p>따라서 [[1]]을 return 합니다.</p></li>
 </ul>
 
+### 풀이
+
+```js
+function solution(n) {
+    let answer = [];
+    
+    for(let i = 0; i < n; i++){
+        answer.push([])
+        for(let j = 0; j < n; j++){
+            answer[i].push(i === j ? 1 : 0)
+        }
+    }
+    
+    return answer;
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges

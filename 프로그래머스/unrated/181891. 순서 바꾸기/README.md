@@ -66,5 +66,12 @@ Empty
 <li>[5, 2, 1, 7, 5]에서 세 번째 이후의 원소는 [7, 5]이고 세 번째까지의 원소는 [5, 2, 1]입니다. 두 리스트를 이어 붙이면 [7, 5, 5, 2, 1]가 됩니다.</li>
 </ul>
 
+### 풀이
+
+```js
+function solution(num_list, n) {
+    return [...num_list.splice(n), ...num_list]
+}
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
